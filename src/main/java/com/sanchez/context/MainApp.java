@@ -8,7 +8,7 @@ public class MainApp {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
 
         UserService userService = applicationContext.getBean(UserService.class);
-        User user = userService.findById(1L);
+        User user = userService.findById(1L); //находим юзера по айдишнику
         System.out.println(user);
 //        Box box = applicationContext.getBean("box",Box.class);
 //        System.out.println(box.getColor());
