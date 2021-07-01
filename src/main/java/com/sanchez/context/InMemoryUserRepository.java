@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @Component
-public class UserRepository {
+public class InMemoryUserRepository implements IUserRepository{
     public List<User> users;
 
     @PostConstruct
@@ -20,6 +20,7 @@ public class UserRepository {
                 new User(4L,"Sergey")
         ));
     }
+@Override
     public User findById(Long id){
         for(User user : users){
             if (user.getId().equals(id)){
